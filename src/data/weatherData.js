@@ -1,0 +1,122 @@
+export const WEATHER_CITIES = [
+  {
+    id: 'kochi',
+    city: 'Kochi',
+    state: 'Kerala',
+    country: 'India',
+    tempC: 29,
+    tempF: 84,
+    condition: 'Partly Cloudy',
+    type: 'cloudy',
+    highC: 31,
+    lowC: 25,
+    feelsLikeC: 32,
+    humidity: 76,
+    windSpeed: '14 km/h SW',
+    aqi: 34,
+    aqiStatus: 'Good',
+    uvIndex: 6,
+    advisory: 'Gentle tropical sea breeze across Marine Drive & Infopark.',
+    forecast: [
+      { day: 'Tue', tempC: 30, condition: 'Partly Cloudy', type: 'cloudy' },
+      { day: 'Wed', tempC: 28, condition: 'Scattered Showers', type: 'rainy' },
+      { day: 'Thu', tempC: 31, condition: 'Sunny', type: 'sunny' }
+    ]
+  },
+  {
+    id: 'trivandrum',
+    city: 'Thiruvananthapuram',
+    state: 'Kerala',
+    country: 'India',
+    tempC: 30,
+    tempF: 86,
+    condition: 'Sunny & Humid',
+    type: 'sunny',
+    highC: 32,
+    lowC: 26,
+    feelsLikeC: 33,
+    humidity: 72,
+    windSpeed: '11 km/h S',
+    aqi: 28,
+    aqiStatus: 'Good',
+    uvIndex: 7,
+    advisory: 'Clear skies over Technopark and the southern coast.',
+    forecast: [
+      { day: 'Tue', tempC: 31, condition: 'Sunny', type: 'sunny' },
+      { day: 'Wed', tempC: 30, condition: 'Partly Cloudy', type: 'cloudy' },
+      { day: 'Thu', tempC: 29, condition: 'Brief Showers', type: 'rainy' }
+    ]
+  },
+  {
+    id: 'kozhikode',
+    city: 'Kozhikode',
+    state: 'Kerala',
+    country: 'India',
+    tempC: 28,
+    tempF: 82,
+    condition: 'Passing Showers',
+    type: 'rainy',
+    highC: 29,
+    lowC: 24,
+    feelsLikeC: 30,
+    humidity: 82,
+    windSpeed: '16 km/h W',
+    aqi: 22,
+    aqiStatus: 'Excellent',
+    uvIndex: 5,
+    advisory: 'Light coastal showers along the Malabar coast.',
+    forecast: [
+      { day: 'Tue', tempC: 28, condition: 'Light Rain', type: 'rainy' },
+      { day: 'Wed', tempC: 29, condition: 'Clearing', type: 'cloudy' },
+      { day: 'Thu', tempC: 30, condition: 'Sunny', type: 'sunny' }
+    ]
+  },
+  {
+    id: 'bengaluru',
+    city: 'Bengaluru',
+    state: 'Karnataka',
+    country: 'India',
+    tempC: 24,
+    tempF: 75,
+    condition: 'Pleasant & Breezy',
+    type: 'cloudy',
+    highC: 27,
+    lowC: 19,
+    feelsLikeC: 24,
+    humidity: 62,
+    windSpeed: '18 km/h E',
+    aqi: 46,
+    aqiStatus: 'Moderate',
+    uvIndex: 6,
+    advisory: 'Mild autumn breeze across Silicon Plateau.',
+    forecast: [
+      { day: 'Tue', tempC: 25, condition: 'Partly Cloudy', type: 'cloudy' },
+      { day: 'Wed', tempC: 26, condition: 'Clear', type: 'sunny' },
+      { day: 'Thu', tempC: 26, condition: 'Partly Cloudy', type: 'cloudy' }
+    ]
+  },
+  {
+    id: 'delhi',
+    city: 'New Delhi',
+    state: 'NCR',
+    country: 'India',
+    tempC: 27,
+    tempF: 81,
+    condition: 'Hazy Sunshine',
+    type: 'sunny',
+    highC: 31,
+    lowC: 20,
+    feelsLikeC: 28,
+    humidity: 48,
+    windSpeed: '8 km/h NW',
+    aqi: 124,
+    aqiStatus: 'Moderate',
+    uvIndex: 5,
+    advisory: 'Moderate autumn haze across National Capital Region.',
+    forecast: [
+      { day: 'Tue', tempC: 28, condition: 'Clear', type: 'sunny' },
+      { day: 'Wed', tempC: 29, condition: 'Sunny', type: 'sunny' },
+      { day: 'Thu', tempC: 30, condition: 'Sunny', type: 'sunny' }
+    ]
+  }
+];

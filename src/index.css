@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply min-h-screen bg-[#fcfbf9] text-neutral-900 dark:bg-[#0a0b0d] dark:text-[#edece9] font-sans antialiased selection:bg-rose-600 selection:text-white transition-colors duration-200;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight;
+  }
+}
+
+/* Custom Editorial Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(140, 140, 140, 0.25);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(140, 140, 140, 0.45);
+}
+
+/* Scroll-driven reading progress bar following modern-web-guidance */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: scroll()) {
+    @keyframes grow-reading-progress {
+      from {
+        transform: scaleX(0);
+      }
+      to {
+        transform: scaleX(1);
+      }
+    }
+
+    .reading-progress-native {
+      transform-origin: 0% 50%;
+      animation: grow-reading-progress auto linear;
+      animation-timeline: scroll();
+    }
+  }
+}
+
+/* Editorial Drop Cap for First Paragraph */
+.prose .lead::first-letter {
+  font-family: 'Playfair Display', Georgia, serif;
+  float: left;
+  font-size: 3.5rem;
+  line-height: 0.85;
+  padding-top: 4px;
+  padding-right: 12px;
+  padding-bottom: 2px;
+  font-weight: 700;
+  color: #e11d48;
+}
+
+/* Custom Editorial Pullquote */
+.editorial-quote {
+  position: relative;
+  font-family: 'Lora', Georgia, serif;
+  font-style: italic;
+  font-size: 1.35rem;
+  line-height: 1.5;
+  border-left: 3px solid #e11d48;
+  padding: 1.25rem 1.75rem;
+  margin: 2.25rem 0;
+  background: rgba(225, 29, 72, 0.03);
+  border-radius: 0 0.75rem 0.75rem 0;
+}
+
+.dark .editorial-quote {
+  background: rgba(225, 29, 72, 0.06);
+}
+
+/* Custom Editorial Callout */
+.callout-box {
+  padding: 1rem 1.25rem;
+  margin: 1.75rem 0;
+  border-left: 4px solid #f59e0b;
+  background: rgba(245, 158, 11, 0.06);
+  border-radius: 0 0.5rem 0.5rem 0;
+  font-family: inherit;
+}
+
+.dark .callout-box {
+  background: rgba(245, 158, 11, 0.1);
+}
+
+/* Card hover lift effect */
+.card-hover {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-3px);
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
